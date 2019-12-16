@@ -30,8 +30,10 @@
         base: '/layuiadmin/' //静态资源所在路径
     }).extend({
         index: 'lib/index' //主入口模块
-    }).use(['index', 'table'], function(){
+    }).use(['index', 'table', 'jquery'], function(){
         var table = layui.table;
+        var $ = layui.jquery;
+
         table.render({
             elem: '#test-table-simple'
             ,url: 'http://127.0.0.1:3000/cron/agent/list'
@@ -53,7 +55,12 @@
                 };
             }
         })
+
     });
+
+
+
+
 </script>
 </body>
 </html>
